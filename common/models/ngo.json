@@ -1,0 +1,35 @@
+{
+  "name": "ngo",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "chapters": {
+      "type": "hasMany",
+      "model": "chapter",
+      "foreignKey": "ngoId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "ngomembers": {
+      "type": "hasMany",
+      "model": "ngomember",
+      "foreignKey": "ngoId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,39 @@
+{
+  "name": "chapter",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ngomembers": {
+      "type": "hasMany",
+      "model": "ngomember",
+      "foreignKey": "chapterId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "events": {
+      "type": "hasMany",
+      "model": "event",
+      "foreignKey": "chapterId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

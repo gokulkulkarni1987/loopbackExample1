@@ -1,0 +1,35 @@
+{
+  "name": "state",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "chapters": {
+      "type": "hasMany",
+      "model": "chapter",
+      "foreignKey": "stateId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "ngomembers": {
+      "type": "hasMany",
+      "model": "ngomember",
+      "foreignKey": "stateId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

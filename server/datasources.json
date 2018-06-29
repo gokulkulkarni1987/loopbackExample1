@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "SociallyGood": {
+    "host": "ds219641.mlab.com",
+    "port": 19641,
+    "url": "",
+    "database": "socially_good",
+    "password": "admin123",
+    "name": "SociallyGood",
+    "user": "gokulkulkarnisoczen",
+    "connector": "mongodb"
+  }
+}
